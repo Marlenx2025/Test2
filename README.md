@@ -1,37 +1,115 @@
-<style>
-  h2 {
-    color: blue;
-  }
-</style>
+<!DOCTYPE html>
+<html lang="en">
 
-<h2>CatPhotoApp</h2>
-<main>
-  <p>Click here to view more <a href="#">cat photos</a>.</p>
+<header>
+  
+  body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #faf9f6;
+}
 
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1C1F2B;
+  padding: 20px 40px;
+}
 
-  <div>
-    <p>Things cats love:</p>
-    <ul>
-      <li>catnip</li>
-      <li>laser pointers</li>
-      <li>lasagna</li>
+.logo {
+  font-size: 24px;
+  color: #E1C699;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #D4AF7F;
+}
+
+.cta {
+  background-color: #D4AF7F;
+  color: #1C1F2B;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.cta:hover {
+  background-color: #e1c699;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #1C1F2B;
+  padding: 10px 0;
+  top: 35px;
+  left: 0;
+  min-width: 180px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+}
+
+.dropdown-menu a {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+  
+    <nav class="navbar">
+    <div class="logo">Marlenx</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Features</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Scheduling</a></li>
+          <li><a href="#">Payments</a></li>
+          <li><a href="#">Client Management</a></li>
+          <li><a href="#">Staff & Payroll</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Pricing</a></li>
+      <li class="dropdown">
+        <a href="#">For Who</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Soccer Coaches</a></li>
+          <li><a href="#">Yoga Instructors</a></li>
+          <li><a href="#">Trainers</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a class="cta" href="#">Start Free Trial</a></li>
     </ul>
-    <p>Top 3 things cats hate:</p>
-    <ol>
-      <li>flea treatment</li>
-      <li>thunder</li>
-      <li>other cats</li>
-    </ol>
-  </div>
-
-  <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
-    <button type="submit">Submit</button>
-  </form>
-</main>
+  </nav>
+</header>
